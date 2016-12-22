@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+    <div id="headline"></div>
+    <script>
+        var text = "headline is going on here about zeeshan ansari will be become a world best developer In Shaa Allah";
+        var myArray = text.split("");
+        var loopTimer;
+        
+        function looping(){
+            if(myArray.length > 0){
+                document.getElementById("headline").innerHTML += myArray.shift();
+                
+            }else{
+                clearTimeout(loopTimer);
+            }
+            loopTimer = setTimeout('looping()',50);
+        }
+        
+        looping();
+    </script>
+</body>
+</html>
