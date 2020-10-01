@@ -8,20 +8,19 @@
     <div id="headline"></div>
     <script>
         var text = "headline is going on here about zeeshan ansari will be become a world best developer In Shaa Allah";
-        var myArray = text.split("");
-        var loopTimer;
-        
-        function looping(){
-            if(myArray.length > 0){
-                document.getElementById("headline").innerHTML += myArray.shift();
-                
-            }else{
-                clearTimeout(loopTimer);
-            }
-            loopTimer = setTimeout('looping()',50);
+        var start = 0 ;
+       function looping(){
+        if(start == text.length){
+            clearInterval(interval)
         }
-        
-        looping();
+        else{
+ document.getElementById("headline").innerHTML += text[start]
+    start++
+        }
+   
+         } 
+         
+    var interval = setInterval(looping,50)
     </script>
 </body>
 </html>
